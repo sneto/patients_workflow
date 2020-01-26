@@ -24,8 +24,7 @@ end;
 
 function GetUser(id : String) : TUser;
 const
-  UserQuery = 'SELECT id, firstname, lastname, birthdate, active, phonenumber, username, password '+
-              'FROM   users WHERE id = :id';
+  UserQuery = 'SELECT * FROM users WHERE id = :id';
 var
   queryParams : TSqlParams;
   queryResult : TSimpleDataset;
